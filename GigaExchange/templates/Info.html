@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>GigaExchange</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- Bootstrap 4.5 CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<!-- Top Bar -->
+	<div class="top-bar">
+		<div class="container">
+			<div class="col-12 text-right">
+				<p>Welcome to GigaExchange!</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- End Top Bar -->
+
+
+	<!-- Navigation -->
+	<nav class = "navbar bg-light navbar-light navbar-expand-lg">
+		<div class="container">
+
+			<a href="{{ url_for('Home')}}" class="navbar-brand"><img src="{{url_for('static', filename='logo.jpg')}}" alt="Logo" title = "GigaExchange"></a>
+
+			<button class="navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class = "collapse navbar-collapse" id = "navbarResponsive">
+				<ul class = "navbar-nav ml-auto">
+					<li class = "nav-item active"><a href = "{{ url_for('Home')}}" class = "nav-link">Home</a></li>
+					<li class = "nav-item"><a href = "{{ url_for('About')}}" class = "nav-link">About</a></li>
+					<li class = "nav-item"><a href = "{{ url_for('Info')}}" class = "nav-link">Info</a></li>
+					<li class = "nav-item"><a href = "{{ url_for('ContactUs')}}" class = "nav-link">Contact Us</a></li>
+					<li class = "nav-item"><a href = "{{ url_for('LogIn')}}" class = "nav-link">Log-In</a></li>
+					<li class = "nav-item"><a href = "{{ url_for('GigaExchange')}}" class = "nav-link">GigaExchange</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navigation -->
+	
+
+	<!-- Main Page Heading -->
+	<div class="col-12 text-center mt-5">
+		<h1 class="text-dark pt-4">Built with Ease</h1>
+		<div class="border-top border-primary w-25 mx-auto my-3"></div>
+		<p class="lead">For all of the champions in the world </p>
+	</div>
+
+	<!-- Three Column Section -->
+	<div class="container">
+		<div class="row my-5">
+			<div class="col-md-4 my-4">
+				<img src="img/1.jpg" alt="" class="w-100">
+				<h4 class="my-4">"Amazing. Incrdeible."</h4>
+				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
+				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
+			</div>
+
+			<div class="col-md-4 my-4">
+				<img src="img/2.jpg" alt="" class="w-100">
+				<h4 class="my-4">"Amazing. Incrdeible."</h4>
+				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
+				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
+			</div>
+
+			<div class="col-md-4 my-4">
+				<img src="img/3.jpg" alt="" class="w-100">
+				<h4 class="my-4">"Amazing. Incrdeible."</h4>
+				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
+				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
+			</div>
+
+		</div>
+	</div>
+	<!-- End Three Column Section -->
+
+
+	<!-- Emoji Navbar First -->
+	<a class="navbar bg-primary sticky-top emoji" href = "emoji" role = "button" data-toggle="collapse"></a>
+
+	<!-- Start Fixed Background IMG -->
+	<div class="fixed-background">
+
+		<div class="row text-light py-5">
+			<div class="col-12 text-center">
+				<h1>Advance to the Next Level</h1>
+				<h3 class="py-4">..see what's on the other side.</h3>
+				<button type = "button" data-toggle = "modal" data-target="#modal1" class = "btn btn-primary btn-lg mr-2"> Blue Pill</a>
+				<button type = "button" data-toggle = "modal" data-target="#modal1" class = "btn btn-danger btn-lg ml-2"> Red Pill</a>
+			</div>
+		</div>
+
+		<div class="fixed-wrap">
+			<div class="fixed"></div>
+		</div>
+	</div>
+	<!-- End Fixed Background IMG -->
+ 
+	
+	<!-- Emoji Navbar Second -->
+	<a class = "navbar bg-primary sticky-top emoji" href = "#emoji" role = "button" data-toggle = "collapse"><i class= "fas fa-money-bill-wave"></i></a>
+
+	<div class = "collapse" id="emoji">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3"><img src="img/emoji/panda.gif" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src="img/emoji/poo.gif" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src="img/emoji/unicorn.gif" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src="img/emoji/chicken.gif" alt="" class="w-100"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Popup -->
+	<div class="modal fade" id="modal1">
+		<div class="modal-dialog">
+			<img src="img/emoji/poo.gif" alt="" class="w-100">
+		</div>
+	</div>
+		
+	<!-- Start Two Column Section -->
+	<div class="container my-5">
+		<div class="row py-4">
+
+			<div class="col-lg-4 mb-4 my-lg-auto">
+				<h1 class ="text-dark font-weight-bold mb-3">We've been expecting you</h1>
+				<p class = "mb-4"> At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace</p>
+				<a href="https://w3newbie.com/themes/" target = " _blank" class="btn btn-outline-dark btn-lg"> The Agenecy Theme</a>
+			</div>
+
+			<div class="col-lg-8"><img src="img/code.jpg" alt="" class="w-100"></div>
+		</div>
+	</div>
+	<!-- End Two Column Section -->
+
+
+	<!-- Start Jumbotron -->
+	<div class="jumbotron py-5 mb-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-lg-8 col-xl-9 my-auto">
+					<h4>Looking for quality web development and design services?</h4>
+				</div>
+				<div class="col-md-5 col-lg-4 col-xl-3 pt-4 pt-md-0">
+					<a href="# " class="btn btn-primary btn-lg">Contact Us Today</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Jumbotron -->
+
+
+	<!-- Start Footer -->
+	<footer> 
+		<div class="container">
+			<div class="row text-light text-center py-4 justify-content-center">
+
+				<div class="col-sm-10 col-md-8 col-kg-6">
+					<img src="img/logo-white.png" alt="">
+					<p>At our core is a collection of design and edevelopment soluctions that represent everything your business needs to compete in the modern marketplace</p>
+					<ul class="social pt-3">
+						<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- End Footer -->
+
+
+	<!-- Start Socket -->
+	<div class="socket text-light tect-center py-3">
+		<p>&copy <a href="https://w3newbie.com"></a>GigaExchange.co</p>
+	</div>
+	<!-- End Socket -->
+
+
+	<!-- Script Source Files -->
+
+	<!-- jQuery -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- Bootstrap 4.5 JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Popper JS -->
+	<script src="js/popper.min.js"></script>
+	<!-- Font Awesome -->
+	<script src="js/all.min.js"></script>
+
+	<!-- End Script Source Files -->
+</body>
+</html>
