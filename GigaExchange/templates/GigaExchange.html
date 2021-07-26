@@ -3,11 +3,10 @@
     <head>
     <title>GigaExchange</title>
     <script src = "https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>GigaExchange</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href= "{{url_for('static', filename='logo.jpg')}}">
 	<!-- Bootstrap 4.5 CSS -->
 	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
 	<!-- Style CSS -->
@@ -52,12 +51,13 @@
 		</div>
 	</nav>
 	<!-- End Navigation -->
-
+    <h1 align ="center">Welcome {{name}} !</h1>
     <div id = "chart"></div>
 
     <div id = "trades"></div>
 
     <div style = "border: solid gray 1px; padding: 20px; width: 600px; margin-top: 20px;">
+        
         <h3>Buy Crypto</h3>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -124,14 +124,62 @@
         //var binanceSocket = new WebSocket ("wss://stream.binance.com:9443/ws/btcusdt@trade");
         
         var tradeDiv = document.getElementById('trades')
-       //binanceSocket.onmessage = function (event){
+         //binanceSocket.onmessage = function (event){
             //console.log(event.data)
 
           // var messageObject = JSON.parse(event.data)
 
          //tradeDiv.append(messageObject.a)
-     // }
+        // }
         </script>
+
+        <!-- Emoji Navbar Second -->
+	    <a class = "navbar bg-primary sticky-top emoji" href = "#emoji" role = "button" data-toggle = "collapse"><i class= "fas fa-money-bill-wave"></i></a>
+
+	    <div class = "collapse" id="emoji">
+		    <div class="container">
+			    <div class="row">
+				    <div class="col-sm-6 col-md-3"><img src="{{url_for('static', filename='BTC.gif')}}"  alt="" class="w-100 l-100"></div>
+				    <div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='ETH.gif')}}" alt="" class="w-100 l-100"></div>
+				    <div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='USDT.gif')}}" alt="" class="w-75"></div>
+				    <div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='BNB.gif')}}" alt="" class="w-75"></div>
+			    </div>
+		    </div>
+	    </div>
+
+    	<!-- Start Footer -->
+	    <footer> 
+		    <div class="container">
+			    <div class="row text-light text-center py-4 justify-content-center">
+				    <div class="col-sm-10 col-md-8 col-kg-6">
+					    <img src="{{url_for('static', filename='logo.jpg')}}"" alt="">
+					    <p>Making a Giga impact in the crpyto space!</p>
+					    <ul class="social pt-3">
+						    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+						    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						    <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+					    </ul>
+				    </div>
+			    </div>
+		    </div>
+	    </footer>
+	    <!-- End Footer -->
+
+        <!-- Start Socket -->
+	    <div class="socket text-light tect-center py-3">
+		    <p>&copy <a href= "https://gigaexchange.herokuapp.com/"></a>Gigaexchange.herokuapp.com</p>
+	    </div>
+	    <!-- End Socket -->
+
         <script src= "{{ url_for('static', filename='chart.js') }}"></script>
+        <!-- jQuery -->
+    	<script src= "{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
+	    <!-- Bootstrap 4.5 JS -->
+	    <script src="{{ url_for('static', filename='bootstrap.min.js') }}" ></script>
+	    <!-- Popper JS -->
+	    <script src="{{ url_for('static', filename='popper.min.js' ) }}"></script>
+	    <!-- Font Awesome -->
+	    <script src="{{ url_for('static', filename='all.min.js') }}"></script>
     </body>
 </html>

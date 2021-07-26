@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>GigaExchange</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href="{{url_for('static', filename='logo.jpg')}}">
 	<!-- Bootstrap 4.5 CSS -->
 	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
 	<!-- Style CSS -->
@@ -50,64 +50,44 @@
 		</div>
 	</nav>
 	<!-- End Navigation -->
+
+
 	
+
 
 	<!-- Main Page Heading -->
 	<div class="col-12 text-center mt-5">
-		<h1 class="text-dark pt-4">Built with Ease</h1>
+		<h1 class="text-dark pt-4"> Info</h1>
 		<div class="border-top border-primary w-25 mx-auto my-3"></div>
-		<p class="lead">For all of the champions in the world </p>
+		<p class="lead"> Learn the basics of Crypto!</p>
 	</div>
 
-	<!-- Three Column Section -->
-	<div class="container">
-		<div class="row my-5">
-			<div class="col-md-4 my-4">
-				<img src="img/1.jpg" alt="" class="w-100">
-				<h4 class="my-4">"Amazing. Incrdeible."</h4>
-				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
-				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
-			</div>
-
-			<div class="col-md-4 my-4">
-				<img src="img/2.jpg" alt="" class="w-100">
-				<h4 class="my-4">"Amazing. Incrdeible."</h4>
-				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
-				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
-			</div>
-
-			<div class="col-md-4 my-4">
-				<img src="img/3.jpg" alt="" class="w-100">
-				<h4 class="my-4">"Amazing. Incrdeible."</h4>
-				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
-				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
-			</div>
-
-		</div>
-	</div>
-	<!-- End Three Column Section -->
+	 <!--- Two Column Section -->
+	 <div class = "container-fluid padding">
+        <div class = "row padding">
+            <div class = "col-lg-6">
+                <h3> What is cryptocurrency?</h3> 
+                <p> Cryptocurrency is a form of payment that can be exchanged online for goods and services. Many companies have issued their own currencies, often called tokens, and these can be traded specifically for the good or service that the company provides. Think of them as you would arcade tokens or casino chips. You’ll need to exchange real currency for the cryptocurrency to access the good or service. Cryptocurrencies work using a technology called blockchain. Blockchain is a decentralized technology spread across many computers that manages and records transactions. Part of the appeal of this technology is its security.</p>
+				<h3> How to trade cryptocurrency?</h3> 				  
+                </p> When you login into your account, under the chart that displays real time data of Bitcoin market price, there are two tabs. One will say “Buy Crypto” and under that tab the other tab will say “Sell Crypto” There is a drop down function in which the you can view which cryptocurrency that you want to buy or sell. When you select which cryptocurrency that you want to buy, enter the quantity that you want to buy or sell the cryptocurrency (*IMPORTANT: The website only allows a minimum of a 20 dollar trade. If the you want to buy or sell a cryptocurrency, you must enter a quantity in which the value is exactly or more than 20 dollars worth. If not, the user will have a red message in which the order will be rejected.*). Once you enter the quantity and selects which cryptocurrency that you would like. You will submit their order by clicking the buy or sell button. When your order has been completed, the balance will be updated in their account and you will be able to see the changes that were made after the transactions.</p>
+				<h3> How to pick which cryptocurrency to invest in?</h3> 
+				<p> When you’re deciding which cryptocurrency to invest in, you should look for a coin with a solid road map and strong plans for development. This is the key if you’re looking for long term success. Here’s few things to watch out for:</p>
+				<p> - Clear timelines for the development of the coin. If there’s no clear timeline, this could show a lack of commitment for the development team.</p>
+				<p> - When are they planning to release major updates?</p>
+				<p> - If the coin has limited number of coins in circulation, then when is that limit expected to be reached?</p>	
+                <br>
+            </div>
+        <div class = "col-lg-6">
+            <img src= "{{url_for('static', filename='Info.jpeg')}}"class ="img-fluid"> 
+        </div>
+        </div>
+        <hr class = "my-4">
+    </div>
 
 
 	<!-- Emoji Navbar First -->
 	<a class="navbar bg-primary sticky-top emoji" href = "emoji" role = "button" data-toggle="collapse"></a>
 
-	<!-- Start Fixed Background IMG -->
-	<div class="fixed-background">
-
-		<div class="row text-light py-5">
-			<div class="col-12 text-center">
-				<h1>Advance to the Next Level</h1>
-				<h3 class="py-4">..see what's on the other side.</h3>
-				<button type = "button" data-toggle = "modal" data-target="#modal1" class = "btn btn-primary btn-lg mr-2"> Blue Pill</a>
-				<button type = "button" data-toggle = "modal" data-target="#modal1" class = "btn btn-danger btn-lg ml-2"> Red Pill</a>
-			</div>
-		</div>
-
-		<div class="fixed-wrap">
-			<div class="fixed"></div>
-		</div>
-	</div>
-	<!-- End Fixed Background IMG -->
  
 	
 	<!-- Emoji Navbar Second -->
@@ -116,52 +96,13 @@
 	<div class = "collapse" id="emoji">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/panda.gif" alt="" class="w-100"></div>
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/poo.gif" alt="" class="w-100"></div>
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/unicorn.gif" alt="" class="w-100"></div>
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/chicken.gif" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='BTC.gif')}}" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='ETH.gif')}}" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='USDT.gif')}}" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='BNB.gif')}}" alt="" class="w-100"></div>
 			</div>
 		</div>
 	</div>
-
-	<!-- Modal Popup -->
-	<div class="modal fade" id="modal1">
-		<div class="modal-dialog">
-			<img src="img/emoji/poo.gif" alt="" class="w-100">
-		</div>
-	</div>
-		
-	<!-- Start Two Column Section -->
-	<div class="container my-5">
-		<div class="row py-4">
-
-			<div class="col-lg-4 mb-4 my-lg-auto">
-				<h1 class ="text-dark font-weight-bold mb-3">We've been expecting you</h1>
-				<p class = "mb-4"> At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace</p>
-				<a href="https://w3newbie.com/themes/" target = " _blank" class="btn btn-outline-dark btn-lg"> The Agenecy Theme</a>
-			</div>
-
-			<div class="col-lg-8"><img src="img/code.jpg" alt="" class="w-100"></div>
-		</div>
-	</div>
-	<!-- End Two Column Section -->
-
-
-	<!-- Start Jumbotron -->
-	<div class="jumbotron py-5 mb-0">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7 col-lg-8 col-xl-9 my-auto">
-					<h4>Looking for quality web development and design services?</h4>
-				</div>
-				<div class="col-md-5 col-lg-4 col-xl-3 pt-4 pt-md-0">
-					<a href="# " class="btn btn-primary btn-lg">Contact Us Today</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Jumbotron -->
-
 
 	<!-- Start Footer -->
 	<footer> 
@@ -169,8 +110,8 @@
 			<div class="row text-light text-center py-4 justify-content-center">
 
 				<div class="col-sm-10 col-md-8 col-kg-6">
-					<img src="img/logo-white.png" alt="">
-					<p>At our core is a collection of design and edevelopment soluctions that represent everything your business needs to compete in the modern marketplace</p>
+					<img src= "{{url_for('static', filename='logo.png')}}" alt="">
+					<p>Making a Giga impact in the crpyto space!</p>
 					<ul class="social pt-3">
 						<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
 						<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -188,7 +129,7 @@
 
 	<!-- Start Socket -->
 	<div class="socket text-light tect-center py-3">
-		<p>&copy <a href="https://w3newbie.com"></a>GigaExchange.co</p>
+		<p>&copy <a href="https://gigaexchange.herokuapp.com/"></a>Gigaexchange.herokuapp.com</p>
 	</div>
 	<!-- End Socket -->
 
@@ -196,13 +137,13 @@
 	<!-- Script Source Files -->
 
 	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src= "{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
 	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='bootstrap.min.js') }}" ></script>
 	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
+	<script src="{{ url_for('static', filename='popper.min.js' ) }}"></script>
 	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+	<script src="{{ url_for('static', filename='all.min.js') }}"></script>
 
 	<!-- End Script Source Files -->
 </body>

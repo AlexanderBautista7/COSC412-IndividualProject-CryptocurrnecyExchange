@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>GigaExchange</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href="{{url_for('static', filename='logo.jpg')}}">
 	<!-- Bootstrap 4.5 CSS -->
 	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
 	<!-- Style CSS -->
@@ -66,37 +66,31 @@
     <div class = "container-fluid padding">
         <div class = "row padding">
             <div class = "col-lg-6">
-                <h2>Our Goal  </h2> 
+                <h2>Our Goal</h2> 
                 <p> Cryptocurrency is a growing phenomenon that can revolutionize our future in the next couple years or so. Cryptocurrency provides a secure and fast way to do transactions without the risk of having data being pirated. Also, it provides people that live around the world to trade freely across countries. Which creates a level of economic equality.  
                 </p> Our goal as an exchange is to create a crypto currency exchange to allow current cryptocurrency to buy and trade while also making new and upcoming crypto currencies available in this exchange. 
-                <p>Holder</p>
                 <br>
             </div>
         <div class = "col-lg-6">
-            <img src= "img/logo.jpg" class ="img-fluid"> 
+            <img src= "{{url_for('static', filename='AboutUs.png')}}"class ="img-fluid"> 
         </div>
         </div>
         <hr class = "my-4">
     </div>
 
-	
-
-
 	<!-- Emoji Navbar First -->
 	<a class="navbar bg-primary sticky-top emoji" href = "emoji" role = "button" data-toggle="collapse"></a>
 
- 
-	
 	<!-- Emoji Navbar Second -->
 	<a class = "navbar bg-primary sticky-top emoji" href = "#emoji" role = "button" data-toggle = "collapse"><i class= "fas fa-money-bill-wave"></i></a>
 
 	<div class = "collapse" id="emoji">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/BTC.gif" alt="" class="w-100"></div>
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/ETH.gif" alt="" class="w-100"></div>
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/USDT.gif" alt="" class="w-100"></div>
-				<div class="col-sm-6 col-md-3"><img src="img/emoji/BNB.gif" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='BTC.gif')}}" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='ETH.gif')}}" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='USDT.gif')}}" alt="" class="w-100"></div>
+				<div class="col-sm-6 col-md-3"><img src= "{{url_for('static', filename='BNB.gif')}}" alt="" class="w-100"></div>
 			</div>
 		</div>
 	</div>
@@ -116,7 +110,7 @@
         <div class = "row padding">
             <div class ="col-md-4">
                 <div class = "card">
-                    <img class = "card-img-top" src ="img/team1.png">
+                    <img class = "card-img-top" src ="{{url_for('static', filename='team1.png')}}">
                     <div class = "card-body">
                     <h4 class = "card-title"> Alexander Bautista </h4>
                     <p class="card-text"> Position: CEO </p>
@@ -136,8 +130,8 @@
 			<div class="row text-light text-center py-4 justify-content-center">
 
 				<div class="col-sm-10 col-md-8 col-kg-6">
-					<img src="img/logo-white.png" alt="">
-					<p>At our core is a collection of design and edevelopment soluctions that represent everything your business needs to compete in the modern marketplace</p>
+					<img src= "{{url_for('static', filename='logo.png')}}" alt="">
+					<p>Making a Giga impact in the crpyto space!</p>
 					<ul class="social pt-3">
 						<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
 						<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -155,7 +149,7 @@
 
 	<!-- Start Socket -->
 	<div class="socket text-light tect-center py-3">
-		<p>&copy <a href="https://w3newbie.com"></a>GigaExchange.co</p>
+		<p>&copy <a href="https://gigaexchange.herokuapp.com/"></a>Gigaexchange.herokuapp.com</p>
 	</div>
 	<!-- End Socket -->
 
@@ -163,13 +157,13 @@
 	<!-- Script Source Files -->
 
 	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src= "{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
 	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='bootstrap.min.js') }}" ></script>
 	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
+	<script src="{{ url_for('static', filename='popper.min.js' ) }}"></script>
 	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+	<script src="{{ url_for('static', filename='all.min.js') }}"></script>
 
 	<!-- End Script Source Files -->
 </body>

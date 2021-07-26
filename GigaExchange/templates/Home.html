@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>GigaExchange</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href= "{{url_for('static', filename='logo.jpg')}}">
 	<!-- Bootstrap 4.5 CSS -->
 	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
 	<!-- Style CSS -->
@@ -53,11 +53,10 @@
 
 
 	<!-- Image Carousel -->
-	<div id = "carousel" class = "carousel slide" data-ride = "carousel" data-interval = "700000">
+	<div id = "carousel" class = "carousel slide" data-ride = "carousel" data-interval = "7000">
 
 		<!-- Carousel Content -->
 		<div class="carousel-inner">
-
 			<div class="carousel-item active">
 				<img src= "{{url_for('static', filename='1C.webp')}}" alt="" class = "w-100">
 				<div class="carousel-caption">
@@ -74,7 +73,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="carousel-item">
 				<img src= "{{url_for('static', filename='2C.jpeg')}}" alt="" class = "w-100">
 				<div class="carousel-caption">
@@ -88,7 +86,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="carousel-item">
 				<img src="{{url_for('static', filename='3C.jpg')}}" alt="" class = "w-100">
 				<div class="carousel-caption">
@@ -109,7 +106,8 @@
 
 		<!-- Previous & Next Buttons -->
 		<a href="#carousel" class="carousel-control-prev" roll = "button" data-slide = "prev">
-			<span class = "fas fa-chevron-left fa-2x" ></span>
+			<span class = "fas fa-chevron-left fa-2x">
+			</span>
 		</a>
 
 		<a href="#carousel" class="carousel-control-next" roll = "button" data-slide = "next">
@@ -131,24 +129,21 @@
 	<div class="container">
 		<div class="row my-5">
 			<div class="col-md-4 my-4">
-				<img src= "{{url_for('static', filename='XLMlogo.jpeg')}}" alt="" class="w-100">
+				<img src= "{{url_for('static', filename='XLMlogo.png')}}" alt="" class="w-100">
 				<h4 class="my-4">"Stellar (XLM)"</h4>
-				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
-				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
+				<p>Stellar, or Stellar Lumens, is an open source, decentralized protocol for digital currency to fiat money low-cost transfers which allows cross-border transactions between any pair of currencies.</p>
 			</div>
 
 			<div class="col-md-4 my-4">
 				<img src = "{{url_for('static', filename='ADAlogo.jpeg')}}" alt="" class="w-100">
 				<h4 class="my-4">"Cardano (ADA)"</h4>
-				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
-				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
+				<p>Cardano is a public blockchain platform. It is open-source and decentralized, with consensus achieved using proof of stake. It can facilitate peer-to-peer transactions with its internal cryptocurrency, Ada. Cardano was founded in 2015 by Ethereum co-founder Charles Hoskinson.</p>
 			</div>
 
 			<div class="col-md-4 my-4">
 				<img src= "{{url_for('static', filename='MATIClogo.jpeg')}}"  alt="" class="w-100">
 				<h4 class="my-4">"Polygon (MATIC)"</h4>
-				<p>Use the adjective amazing to describe something that is so good, it surprises you, like the amazing beauty of the Rocky Mountains.</p>
-				<a href="#" class="btn btn-outline-dark btn-md">Our Story</a>
+				<p> Polygon an Indian blockchain scalability platform called 'the Ethereum's Internet of Blockchains'. It is the answer to some of the challenges faced by Ethereum today - such as heavy fees, poor user experience and low transactions per second (TPS). And it aims to create a multi-chain ecosystem of ethereum compatible blockchains.</p>
 			</div>
 
 		</div>
@@ -170,7 +165,6 @@
 				<button type = "button" data-toggle = "modal" data-target="#modal2" class = "btn btn-danger btn-lg ml-2"> Crypto 2</a>
 			</div>
 		</div>
-
 		<div class="fixed-wrap">
 			<div class="fixed"></div>
 		</div>
@@ -200,7 +194,7 @@
 	</div>
 	<div class="modal fade" id="modal2">
 		<div class="modal-dialog">
-			<img src="{{url_for('static', filename='SAFE.gi')}}f" alt="" class="w-100">
+			<img src="{{url_for('static', filename='SAFE.gif')}}" alt="" class="w-100">
 		</div>
 	</div>
 		
@@ -213,29 +207,13 @@
 				<p class = "mb-4"> If you are interested in joining GigaExchange please do not hesistate and reach out. We are always looking for new people to join our company.
 					We have postions that range from web-dvelopment, customer service representative, marketing specialist. Please, do not hesistate and reach out and join our wonderful team!
 				</p>
-				<a href="https://w3newbie.com/themes/" target = " _blank" class="btn btn-outline-dark btn-lg"> Join the Team</a>
+				<a href= "{{ url_for('ContactUs')}}" target = " _blank" class="btn btn-outline-dark btn-lg"> Join the Team</a>
 			</div>
 
 			<div class="col-lg-8"><img src="{{url_for('static', filename='code.jpg')}}" alt="" class="w-100"></div>
 		</div>
 	</div>
 	<!-- End Two Column Section -->
-
-
-	<!-- Start Jumbotron -->
-	<div class="jumbotron py-5 mb-0">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7 col-lg-8 col-xl-9 my-auto">
-					<h4>Looking for quality web development and design services?</h4>
-				</div>
-				<div class="col-md-5 col-lg-4 col-xl-3 pt-4 pt-md-0">
-					<a href="# " class="btn btn-primary btn-lg">Contact Us Today</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Jumbotron -->
 
 
 	<!-- Start Footer -->
@@ -263,7 +241,7 @@
 
 	<!-- Start Socket -->
 	<div class="socket text-light tect-center py-3">
-		<p>&copy <a href="https://w3newbie.com"></a>GigaExchange.co</p>
+		<p>&copy <a href= "https://gigaexchange.herokuapp.com/"></a>Gigaexchange.herokuapp.com</p>
 	</div>
 	<!-- End Socket -->
 
@@ -271,13 +249,14 @@
 	<!-- Script Source Files -->
 
 	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- jQuery -->
+	<script src= "{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
 	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='bootstrap.min.js') }}" ></script>
 	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
+	<script src="{{ url_for('static', filename='popper.min.js' ) }}"></script>
 	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+	<script src="{{ url_for('static', filename='all.min.js') }}"></script>
 
 	<!-- End Script Source Files -->
 </body>
