@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request, flash, redirect, jsonify, url_for
-import config, csv
+import config, csv, pickle
 from binance.client import Client
 from binance.enums import *
 
 app = Flask(__name__)
 app.secret_key = b'M8PXq8Y7WZ3VvZpXMWWCXHufvVGwt3rHxSEm75W11anGinkJolo1ZwAhbynWP0Zn'
 client = Client(config.API_KEY, config.API_SECRET, tld = 'us')
+database = {'Admin':'COSC412IndividProj'}
 @app.route('/')
 def Home():
     return render_template('Home.html')
@@ -43,25 +44,26 @@ def GigaExchange():
 def buy():
     print(request.form)
     try:
-        order = client.create_test_order(symbol = request.form['symbol'],
+        order = client.create_order(symbol = request.form['symbol'],
             side = SIDE_BUY,
             type = ORDER_TYPE_MARKET,
             quantity = request.form['quantity'])
     except Exception as e:
             flash(e.message, "error")
         
-    return redirect('/')
+    return redirect('GigaExchange')
     
 @app.route('/sell', methods = ['POST'] )
 def sell():
     print(request.form)
     try:
-        order = client.create_test_order(symbol = request.form['symbol'],
+        order = client.create_order(symbol = request.form['symbol'],
             side = SIDE_SELL,
             type = ORDER_TYPE_MARKET,
             quantity = request.form['quantity'])
     except Exception as e:
             flash(e.message, "error")
+    return redirect('GigaExchange')
 
 
 @app.route('/settings')
